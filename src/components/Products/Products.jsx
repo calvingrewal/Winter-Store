@@ -12,7 +12,7 @@ class Products extends Component {
     return (
       <div className="Products">
         <h1>Products</h1>
-        {products &&
+        {products && products.length ?
           <ProductsList>
             {products.map(({ id, name, description, img}) =>
               <div key={id} className="Product">
@@ -21,7 +21,9 @@ class Products extends Component {
               </div>
             )}
           </ProductsList>
-      }
+          :
+          <p>Loading Products...</p>
+        }
       </div>
     )
   }
