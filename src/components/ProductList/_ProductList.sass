@@ -1,0 +1,16 @@
+.ProductsList
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  grid-gap: 20px
+  grid-auto-rows: minmax(100px, auto)
+
+  .product
+    display: inline-block
+    grid-row: 1
+
+    &:nth-child(n+4)
+      grid-row: 2
+
+    img
+      max-height: 400px
+      height: 100%

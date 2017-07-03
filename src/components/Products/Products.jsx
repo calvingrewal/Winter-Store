@@ -13,14 +13,7 @@ class Products extends Component {
       <div className="Products">
         <h1>Products</h1>
         {products && products.length ?
-          <ProductsList>
-            {products.map(({ id, name, description, img}) =>
-              <div key={id} className="Product">
-                <h3>{name}</h3>
-                <p>{description}</p>
-              </div>
-            )}
-          </ProductsList>
+          <ProductsList products={products} />
           :
           <p>Loading Products...</p>
         }
