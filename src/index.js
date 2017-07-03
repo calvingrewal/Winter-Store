@@ -8,7 +8,7 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 
 import rootReducer from './reducers/rootReducer'
 
-import App from './Components/App/App.jsx'
+import App from './components/App/App.jsx'
 
 const loggerMiddleware = createLogger()
 
