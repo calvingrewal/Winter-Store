@@ -4,9 +4,47 @@ const path = require('path')
 const app = express()
 
 app.get('/api/products', (req,res) => {
-  console.log('received response api');
+
   return res.json({
-    date: Date.now()
+    products: [
+      {
+        id: 0,
+        name: 'Jacket',
+        description: 'An outdoor jacket to protect you from the elements',
+        img: 'jacket.jpg'
+      },
+      {
+        id: 1,
+        name: 'Pants',
+        description: 'Waterproof pants to keep you warm and dry',
+        img: 'pants.jpg'
+      },
+      {
+        id: 2,
+        name: 'Sweatshirt',
+        description: 'A nice and cozy sweatshirt, perfect for winter',
+        img: 'sweatshirt.jpg'
+      },
+      {
+        id: 3,
+        name: 'Gloves',
+        description: 'Warm gloves to keep your hands warm',
+        img: 'gloves.jpg'
+      },
+      {
+        id: 4,
+        name: 'Sunglasses',
+        description: 'Protect your eyes from the sun\'s harsh rays',
+        img: 'sunglasses.jpg'
+      },
+      {
+        id: 5,
+        name: 'Water Bottle',
+        description: 'A bottle to keep you hydrated throughout the day',
+        img: 'water-bottle.jpg'
+      },
+
+    ]
   })
 })
 app.get('*', (req,res) => {
