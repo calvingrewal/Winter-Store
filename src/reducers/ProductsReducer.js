@@ -1,7 +1,7 @@
 import { REQUEST_PRODUCTS, RECEIVE_PRODUCTS } from '../actions/ProductsActions'
 
 const initialState = {
-  products: [],
+  productsList: [],
   lastFetchedProducts: null,
   isFetching: false
 }
@@ -17,7 +17,7 @@ function ProductsReducer(state = initialState, action) {
     case RECEIVE_PRODUCTS:
       return {
         ...state,
-        products: action.products,
+        productsList: action.products,
         lastFetchedProducts: action.receivedAt,
         isFetching: false
       }

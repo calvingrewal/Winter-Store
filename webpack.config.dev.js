@@ -11,8 +11,11 @@ module.exports = {
   },
   devtool: 'source-map',
   devServer: {
-     historyApiFallback: true,
-     proxy: {
+    watchOptions: {
+      ignored: /node_modules/
+    },
+    historyApiFallback: true,
+    proxy: {
       "/api": "http://localhost:8081"
     }
   },
