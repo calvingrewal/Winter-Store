@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import ProductsList from '../ProductsList/ProductsList.jsx'
+import ProductList from '../ProductList/ProductList.jsx'
 import { fetchProducts } from '../../actions/ProductsActions'
 
 class Products extends Component {
@@ -13,7 +13,7 @@ class Products extends Component {
       <div className="Products">
         <h1>Products</h1>
         {products && products.length ?
-          <ProductsList products={products} />
+          <ProductList products={products} />
           :
           <p>Loading Products...</p>
         }

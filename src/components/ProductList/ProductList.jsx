@@ -7,7 +7,7 @@ class ProductsList extends Component {
       <div className="ProductsList">
         {products.map(({ id, name, description, img}) =>
           <div key={id} className="product">
-            <img src={img} alt={img}/>
+            <img src={`/static/images/${img}`} alt={img}/>
             <h3>{name}</h3>
             <p>{description}</p>
             <button>Add to Cart</button>

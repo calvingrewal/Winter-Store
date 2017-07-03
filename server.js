@@ -15,15 +15,15 @@ app.get('/api/products', (req,res) => {
       },
       {
         id: 1,
-        name: 'Pants',
-        description: 'Waterproof pants to keep you warm and dry',
-        img: 'pants.jpg'
+        name: 'Boots',
+        description: 'Rugged boots, perfect for winter',
+        img: 'boots.jpg'
       },
       {
         id: 2,
-        name: 'Sweatshirt',
-        description: 'A nice and cozy sweatshirt, perfect for winter',
-        img: 'sweatshirt.jpg'
+        name: 'Sweater',
+        description: 'A nice and cozy sweater, perfect for winter',
+        img: 'sweater.jpg'
       },
       {
         id: 3,
@@ -33,9 +33,9 @@ app.get('/api/products', (req,res) => {
       },
       {
         id: 4,
-        name: 'Sunglasses',
+        name: 'Googles',
         description: 'Protect your eyes from the sun\'s harsh rays',
-        img: 'sunglasses.jpg'
+        img: 'goggles.jpg'
       },
       {
         id: 5,
