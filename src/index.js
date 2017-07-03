@@ -13,9 +13,11 @@ const loggerMiddleware = createLogger()
 
 const store = createStore(
   rootReducer,
-  applyMiddleware(
-    thunkMiddleware,
-    loggerMiddleware
+  composeWithDevTools (
+    applyMiddleware(
+      thunkMiddleware,
+      loggerMiddleware
+    )
   )
 )
 
