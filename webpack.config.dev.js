@@ -12,6 +12,9 @@ module.exports = {
   devtool: 'source-map',
   devServer: {
      historyApiFallback: true,
+     proxy: {
+      "/api": "http://localhost:8081"
+    }
   },
   module: {
     rules: [
