@@ -12,6 +12,7 @@ import rootReducer from './reducers/rootReducer'
 import App from './components/App/App.jsx'
 import Products from './components/Products/Products.jsx'
 import Cart from './Components/Cart/Cart.jsx'
+
 const loggerMiddleware = createLogger()
 
 const store = createStore(
@@ -33,4 +34,5 @@ render(
         <Route path='cart' component={Cart} />
       </Route>
     </Router>
-  </Provider>, document.getElementById('app'))
+  </Provider>, document.getElementById('app')
+)
