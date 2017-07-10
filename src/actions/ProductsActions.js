@@ -19,8 +19,8 @@ export function fetchProducts() {
 
     return fetch('/api/products')
             .then(res => res.json())
-            .then(res => {
-              dispatch(receiveProducts(res.products))
+            .then(json => {
+              dispatch(receiveProducts(json))
             })
   }
 }

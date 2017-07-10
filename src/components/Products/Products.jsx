@@ -13,7 +13,7 @@ class Products extends Component {
     return (
       <div className="Products">
         <h1>Products</h1>
-        {products && products.length ?
+        {products && Object.keys(products).length ?
           <ProductList products={products} handleAddToCart={this.props.addProductToCart} />
           :
           <p>Loading Products...</p>

@@ -1,7 +1,7 @@
 import { REQUEST_PRODUCTS, RECEIVE_PRODUCTS } from '../actions/ProductsActions'
 
 const initialState = {
-  productsList: [],
+  productsList: {},
   lastFetchedProducts: null,
   isFetching: false
 }
