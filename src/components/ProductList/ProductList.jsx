@@ -10,7 +10,7 @@ class ProductsList extends Component {
             <img src={`/static/images/${img}`} alt={img}/>
             <h3>{name}</h3>
             <p>{description}</p>
-            <button>Add to Cart</button>
+            <button className='btn-primary'>Add to Cart</button>
           </div>
         )}
       </div>
