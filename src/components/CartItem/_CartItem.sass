@@ -2,8 +2,12 @@ $secondary: #AB382C
 
 .CartItem
   display: flex
-  padding: 2em
+  padding: 2em 0
   height: 250px
+
+  &:not(:last-child)
+    border-bottom: 1px solid black
+
   .img-container
     width: 25%
     img
