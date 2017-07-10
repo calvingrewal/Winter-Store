@@ -11,8 +11,8 @@ import rootReducer from './reducers/rootReducer'
 
 import App from './components/App/App.jsx'
 import Products from './components/Products/Products.jsx'
-import Cart from './Components/Cart/Cart.jsx'
-import CartItem from './Components/CartItem/CartItem.jsx'
+import Cart from './components/Cart/Cart.jsx'
+import CartItem from './components/CartItem/CartItem.jsx'
 
 const loggerMiddleware = createLogger()
 
