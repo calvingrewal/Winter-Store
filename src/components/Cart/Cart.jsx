@@ -12,12 +12,13 @@ class Cart extends Component {
           <div className="items">
             <h3>Items</h3>
             {
-              this.props.items.map(({ id, name, description, img}) =>
+              this.props.items.map(({ id, name, description, img, price}) =>
                 <CartItem key={id}
                   id={id}
                   name={name}
                   description={description}
                   img={img}
+                  price={price}
                   />
               )
             }
@@ -32,12 +33,13 @@ class Cart extends Component {
 }
 function getItemsFromIds(state, idList) {
   return idList.map(id => {
-    const { name, description, img } = state.products.productsList[id]
+    const { name, description, img, price } = state.products.productsList[id]
     return {
       id,
       name,
       description,
-      img
+      img,
+      price
     }
   })
 }
