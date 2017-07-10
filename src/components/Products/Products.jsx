@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import ProductList from '../ProductList/ProductList.jsx'
 import { fetchProducts } from '../../actions/ProductsActions'
+import { addProductToCart } from '../../actions/CartActions'
 
 class Products extends Component {
   componentDidMount() {
@@ -13,7 +14,7 @@ class Products extends Component {
       <div className="Products">
         <h1>Products</h1>
         {products && products.length ?
-          <ProductList products={products} />
+          <ProductList products={products} handleAddToCart={this.props.addProductToCart} />
           :
           <p>Loading Products...</p>
         }
@@ -23,13 +24,14 @@ class Products extends Component {
 }
 const mapStateToProps = state => {
   return {
-    products: state.Products.productsList,
-    isFetching: state.Products.isFetching
+    products: state.products.productsList,
+    isFetching: state.products.isFetching
   }
 }
 const mapDispatchToProps = dispatch => {
   return {
-    fetchProducts: () => dispatch(fetchProducts())
+    fetchProducts: () => dispatch(fetchProducts()),
+    addProductToCart: (id) => dispatch(addProductToCart(id))
   }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Products)

@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 
 class ProductsList extends Component {
+  addToCart = (id) => {
+    this.props.handleAddToCart(id)
+  }
   render() {
     const { products } = this.props
     return (
@@ -10,7 +13,7 @@ class ProductsList extends Component {
             <img src={`/static/images/${img}`} alt={img}/>
             <h3>{name}</h3>
             <p>{description}</p>
-            <button className='btn-primary'>Add to Cart</button>
+            <button className='btn-primary' onClick={() => this.addToCart(id)}>Add to Cart</button>
           </div>
         )}
       </div>

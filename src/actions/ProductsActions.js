@@ -1,10 +1,3 @@
-export const ADD_PRODUCT_TO_CART = 'ADD_PRODUCT_TO_CART'
-export function addProductToCart(product) {
-  return {
-    type: ADD_PRODUCT_TO_CART,
-    product
-  }
-}
 export const REQUEST_PRODUCTS = 'REQUEST_PRODUCTS'
 export function requestProducts() {
   return {

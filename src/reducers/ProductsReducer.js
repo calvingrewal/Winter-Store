@@ -21,6 +21,7 @@ function ProductsReducer(state = initialState, action) {
         lastFetchedProducts: action.receivedAt,
         isFetching: false
       }
+      break
   }
   return state
 }
